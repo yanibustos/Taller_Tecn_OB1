@@ -1,0 +1,13 @@
+Usuario y contraseña deben tener x cantidad de caracteres,incluir simbolos,etc?
+La contraseña se debe ocultar?
+
+Tanto el registro de usuarios, informes generados y diccionario, los guardamos en root o debemos guardar/buscar en otras partes de C:?
+
+Busqueda de palabras es con la letra que inicia o con la que termina?
+
+
+
+
+
+
+
