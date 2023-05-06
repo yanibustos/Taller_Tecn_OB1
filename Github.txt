@@ -1,0 +1,14 @@
+-Comandos
+
+git clone name_repo -----> clona el repo
+git checkout -b "New branch" -----> crear rama
+git push "New branch" -----> subir los cambios
+git pull "Branch name" -----> bajar nuevos cambios
+
+
+-Para fusionar con DEV
+
+Ir al github del Repo
+Pull request view
+Seleccionar tu rama y adonde se hace el merge
+Alguien aprueba y fusiona
