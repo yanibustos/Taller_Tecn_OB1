@@ -1,0 +1,3 @@
+Se cambio sed -i en el codigo, lo estabamos usando para cambiar fecha de Login (reemplazaria todas las fechas sin importar el usuario).
+
+#!/bin/bash -x (para ver paso por paso lo que hace el programa y encontrar fallas)
