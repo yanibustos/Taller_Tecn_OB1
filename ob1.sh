@@ -26,10 +26,6 @@ case $opc in
 			read username
 			echo "Ingrese contrasena"
 			read password
-			
-		if [[ ! -e log.txt ]]; then
-				touch log.txt
-		fi
 
 		echo $username $password $d >> log.txt
 		done
