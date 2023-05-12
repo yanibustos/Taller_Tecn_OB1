@@ -44,7 +44,7 @@ touch log.txt
 
 while [ $opc -ne 3 ] ; do
 
-#clear
+clear
 
 echo "Bienvenido!"
 echo
@@ -55,7 +55,7 @@ read -p "Seleccione una opcion: " opc
 
 case $opc in
 
-	1)#clear	
+	1)clear	
 		while true
 		do
 			echo -e "Ingrese nombre de usuario\n"
@@ -76,7 +76,7 @@ case $opc in
 		done
 		sleep 3
 		;;
-	2)#clear	
+	2)clear	
 		read -p "Ingrese usuario para ingresar al sistema: " userLogin
 		read -p "Ingrese contrasena: " passLogin
 		echo
@@ -99,7 +99,7 @@ case $opc in
 		fi
 
 		sleep 2
-		#clear
+		clear
 		
 		opcSistema=0
 
@@ -108,55 +108,55 @@ case $opc in
 			print_welcome $userLogin $lastLogin
 		read -p "Seleccione una opcion: " opcSistema
 		case $opcSistema in
-			1)#clear
+			1)clear
 				read -p "Ingrese nueva contrasena " newpass
 				## Reemplaza la contraseña solo si coincide el usuario con la contraseña
 				sed -i "/^$userLogin $passLogin/s/$passLogin/$newpass/g" log.txt
 				logger_info "Su contrasena ha sido actualizada"
 				sleep 2
-				#clear
+				clear
 				;;
-			2)#clear
+			2)clear
 				read -p "Ingrese una letra " letter
 				echo
 				logger_info "La letra $letter ha sido guardada"
 
 				sleep 2
-				#clear
+				clear
 				;;
-			3)#clear
+			3)clear
 
 				grep -a "$letter$" diccionario.txt
 				sleep 3
-				#clear
+				clear
 				;;
-			4)#clear
+			4)clear
 				cantidad=$(grep -c "$letter$" diccionario.txt)
 				logger_info "Cantidad de palabras que finalizan con la letra $letter : $cantidad"
 				sleep 4
-				#clear
+				clear
 				;;
-			5)#clear
+			5)clear
 				nombreFichero="informe_"$d"_"$h"_"$letter".txt"
 				logger_info "Guardando resultado de busqueda como $nombreFichero..."
 				grep -a "$letter$" diccionario.txt >> "$nombreFichero"
 				sleep 4
-				#clear
+				clear
 				;;
 
 		esac		
 		done
 		sleep 2
 		;;
-	3)#clear
+	3)clear
 		logger_info "Cerrando sistema..."
 		sleep 2
-		#clear
+		clear
 		;;
-	*)#clear
+	*)clear
 		logger_error "$opc no es una opcion valida"
 		sleep 2
-		#clear
+		clear
 		;;
 esac	
 done
